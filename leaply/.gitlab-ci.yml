@@ -1,0 +1,24 @@
+image: node:14.17.0-alpine3.12
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths: 
+      - build/
+
+deploy_production:
+  stage: deploy
+  environment: Production
+  only:
+    - master
+  script:
+    - npm install -g firebase-tools
+    - firebase use --token $FIREBASE_DEPLOY_KEY leaply-nest
+    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY

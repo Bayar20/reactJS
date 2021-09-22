@@ -1,0 +1,15 @@
+image: node
+
+deploy:
+  only:
+    - master
+
+  script:
+    - echo "Starting"
+    - yarn
+    - yarn global add firebase-tools
+    - yarn global add env-cmd
+    - export CI=false
+    - env-cmd -f ./.env.development yarn build
+    - firebase deploy --token "1//0ejDRGNSubNeOCgYIARAAGA4SNwF-L9IrDQtjieeQDeREwylPlXZG8g6W6LVbla8SIme76xy9jUx53Z0QwNeWjRoT2eJle0TS1ek"
+    - echo "End"

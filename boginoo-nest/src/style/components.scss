@@ -1,0 +1,56 @@
+@import './variables.scss';
+
+/*
+    text-transform
+    text-decoration
+    outline
+    border
+    эдгээр property-ийг судлаарай
+*/
+
+.btn {
+    border-radius: 100px;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .6;
+}
+
+.input {
+    border-radius: 100px;
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.16);
+    padding-left: 15px;
+}
+
+.form > * {
+   margin-top: 15px
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.faded {
+    opacity: .5;
+}
+
+.c-button {
+    text-transform: none !important;
+}
+
+.bottom-border {
+    border-bottom: 1px solid rgba(204, 204, 204, 0.527);
+}

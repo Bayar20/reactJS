@@ -1,0 +1,23 @@
+.container {
+    .homepage {
+        margin: 0;
+    
+        #icons {
+            z-index: 0;
+            display: flex !important;
+            margin: auto 0;
+            margin-left: 50px;
+            bottom: 50px;
+            justify-content: space-around;
+            width: 610px;
+            position: fixed;
+            align-items: center;
+        }
+            .map {
+                height: 100%;
+                width: 710px;
+                z-index: 0;
+                position: absolute
+            }
+    }
+}
