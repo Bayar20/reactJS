@@ -1,0 +1,18 @@
+.square {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.snake-char {
+  background-color: rebeccapurple;
+}
+
+.apple-char {
+  background-color: cadetblue;
+}
