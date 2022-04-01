@@ -8,7 +8,7 @@ import 'materialize-css/dist/js/materialize.js';
 
 import Loader from './components/loader'
 
-const baseUrl = 'https://us-central1-qr-payment-nest.cloudfunctions.net'
+const baseUrl = 'https://us-central1-qr-payment-hop.cloudfunctions.net'
 // const baseUrl = 'http://localhost:5001/qr-payment-nest/us-central1'
 function App() {
     const [qrImage, setQrImage] = useState();
