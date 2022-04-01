@@ -6,7 +6,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin')
 admin.initializeApp();
 
-const baseUrl = 'https://us-central1-qr-payment-nest.cloudfunctions.net'
+const baseUrl = 'https://us-central1-qr-payment-hop.cloudfunctions.net'
 
 exports.shop_create_invoice = functions.https.onRequest((request, response) => {
     cors(request, response, async () => {

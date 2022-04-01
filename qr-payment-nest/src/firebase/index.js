@@ -3,13 +3,13 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const config = {
-    apiKey: "AIzaSyAX6ioGkHqQmbygX0yOzrIg_HdCZlk6HlA",
-    authDomain: "qr-payment-nest.firebaseapp.com",
-    projectId: "qr-payment-nest",
-    storageBucket: "qr-payment-nest.appspot.com",
-    messagingSenderId: "437306254192",
-    appId: "1:437306254192:web:1c2c08e082d2b9445265b5"
-}
+    apiKey: "AIzaSyAacPhprL0yyEvCBgwOuEszVkPhh3KOxCg",
+    authDomain: "qr-payment-hop.firebaseapp.com",
+    projectId: "qr-payment-hop",
+    storageBucket: "qr-payment-hop.appspot.com",
+    messagingSenderId: "751288886409",
+    appId: "1:751288886409:web:5c43923d2b83a5c5801258"
+  };
 
 firebase.initializeApp(config);
 

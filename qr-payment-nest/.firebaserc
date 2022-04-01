@@ -1,5 +1,5 @@
 {
   "projects": {
-    "default": "qr-payment-nest"
+    "default": "qr-payment-hop"
   }
 }
