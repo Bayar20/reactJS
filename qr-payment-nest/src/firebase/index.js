@@ -3,7 +3,7 @@ import 'firebase/auth'
 import 'firebase/firestore'
 
 const config = {
-    apiKey: "AIzaSyAacPhprL0yyEvCBgwOuEszVkPhh3KOxCg",
+    apiKey: process.env.FIREBASE_API_KEY,
     authDomain: "qr-payment-hop.firebaseapp.com",
     projectId: "qr-payment-hop",
     storageBucket: "qr-payment-hop.appspot.com",
