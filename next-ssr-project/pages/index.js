@@ -1,35 +1,23 @@
-import styles from '../styles/Home.module.css'
+const axios = require("axios");
 
 export const Home = (props) => {
-
-  return (
-    <div className={styles.container}>
-      {
-        props.myProp ? (
-          <h1>
-            Looks like we have our SSR application.
-          </h1>
-        )
-          :
-          (
-            <h1>
-              Oops, SSR props were not passed!
-            </h1>
-          )
-      }
-    </div>
-  )
-}
+    return props.poem ? (
+        <div>
+            <h2>{props.poem.title}</h2>
+            {props.poem.lines.map((line, index) => (
+                <div key={index}>{line}</div>
+            ))}
+        </div>
+    ) : (
+        <h1>Oops, SSR props were not passed!</h1>
+    );
+};
 
 export async function getServerSideProps() {
-  return { props: { myProp: false } }
+    const response = await axios.get("https://poetrydb.org/title/Ozymandias");
+    console.log(response.data);
+
+    return { props: { poem: response.data[0] } };
 }
 
-export default Home 
-
-```
-npx create-next-app@latest --typescript
-# or
-yarn create next-app --typescript
-```
-
+export default Home;
