@@ -9,6 +9,7 @@ admin.initializeApp();
 const baseUrl = 'https://us-central1-qr-payment-hop.cloudfunctions.net'
 
 exports.shop_create_invoice = functions.https.onRequest((request, response) => {
+    console.log(request.body)
     cors(request, response, async () => {
         const db = admin.firestore();
         const invoice = await db.collection('shop-invoices').add(request.body);
