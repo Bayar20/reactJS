@@ -15,7 +15,6 @@ export const Home = (props) => {
 
 export async function getServerSideProps() {
     const response = await axios.get("https://poetrydb.org/title/Ozymandias");
-    console.log(response.data);
 
     return { props: { poem: response.data[0] } };
 }
